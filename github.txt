@@ -1,0 +1,127 @@
+
+
+## 🧭 **Git Basics**
+
+| Command                   | Description                                           |
+| ------------------------- | ----------------------------------------------------- |
+| `git init`                | Initialize a new Git repository                       |
+| `git clone <url>`         | Clone an existing repository                          |
+| `git status`              | Show the status of working directory and staging area |
+| `git add <file>`          | Add file(s) to the staging area                       |
+| `git add .`               | Add all changes to staging area                       |
+| `git commit -m "message"` | Commit changes with a message                         |
+| `git log`                 | View commit history                                   |
+| `git diff`                | Show file differences not yet staged                  |
+| `git diff --staged`       | Show staged file differences                          |
+
+---
+
+## 🌿 **Branches**
+
+| Command                  | Description                            |
+| ------------------------ | -------------------------------------- |
+| `git branch`             | List branches                          |
+| `git branch <name>`      | Create a new branch                    |
+| `git checkout <name>`    | Switch to a branch                     |
+| `git checkout -b <name>` | Create and switch to a new branch      |
+| `git merge <branch>`     | Merge a branch into the current branch |
+| `git branch -d <name>`   | Delete a branch                        |
+
+---
+
+## ☁️ **Working with Remote (GitHub)**
+
+| Command                       | Description                         |
+| ----------------------------- | ----------------------------------- |
+| `git remote -v`               | Show remotes                        |
+| `git remote add origin <url>` | Connect local repo to GitHub        |
+| `git push -u origin main`     | Push branch to remote (first time)  |
+| `git push`                    | Push changes                        |
+| `git pull`                    | Fetch and merge changes from remote |
+| `git fetch`                   | Fetch changes (don’t merge yet)     |
+| `git clone <url>`             | Clone a remote repo                 |
+
+---
+
+## ⚙️ **Undo & Fix**
+
+| Command                 | Description                                |
+| ----------------------- | ------------------------------------------ |
+| `git restore <file>`    | Restore file to last commit                |
+| `git reset <file>`      | Unstage a file                             |
+| `git reset --hard`      | Undo all changes (dangerous)               |
+| `git revert <commit>`   | Create a new commit undoing a previous one |
+| `git checkout <commit>` | Switch to a specific commit temporarily    |
+
+---
+
+## 🏷️ **Tags (for versions)**
+
+| Command                          | Description              |
+| -------------------------------- | ------------------------ |
+| `git tag`                        | List all tags            |
+| `git tag <name>`                 | Create a lightweight tag |
+| `git tag -a <name> -m "message"` | Annotated tag            |
+| `git push origin <tagname>`      | Push tag to GitHub       |
+
+---
+
+## 🔐 **.gitignore**
+
+* A `.gitignore` file tells Git which files/folders to ignore.
+  Example:
+
+  ```
+  node_modules/
+  *.log
+  .env
+  ```
+
+---
+
+## 🧩 **GitHub Markdown (README.md)**
+
+| Feature    | Syntax                  | Example                                                                            |
+| ---------- | ----------------------- | ---------------------------------------------------------------------------------- |
+| Heading    | `#` to `######`         | `# Title`                                                                          |
+| Bold       | `**text**`              | **bold**                                                                           |
+| Italic     | `*text*`                | *italic*                                                                           |
+| Link       | `[title](url)`          | [GitHub](https://github.com)                                                       |
+| Image      | `![alt](url)`           | ![Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) |
+| Code block | ` ```language ... ``` ` | `python print("Hello") `                                                           |
+| Task list  | `- [x] done`            | - [x] done                                                                         |
+
+---
+
+## 🔄 **Common Workflow Example**
+
+```bash
+# Create new repo
+git init
+
+# Connect to GitHub
+git remote add origin https://github.com/username/repo.git
+
+# Add files
+git add .
+
+# Commit
+git commit -m "Initial commit"
+
+# Push to main branch
+git branch -M main
+git push -u origin main
+```
+
+---
+
+## 💡 **Pro Tips**
+
+* Use `git log --oneline --graph --decorate --all` to visualize branches.
+* Use `.gitignore` before first commit to avoid unwanted files.
+* Always pull before pushing to avoid conflicts.
+* Commit often with meaningful messages.
+
+---
+
+Would you like me to make this into a **printable PDF cheat sheet** (visually formatted and compact, great for quick reference)?
